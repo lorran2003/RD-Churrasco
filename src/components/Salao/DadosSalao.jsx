@@ -1,5 +1,8 @@
-import { MapPage } from "./MapPage";
+import video from "../../assets/videoSalao.mp4";
+import { lazy, Suspense } from "react";
+import { LoadingImage } from "../LoadingImage";
 
+const MapPage = lazy(() => import('./MapPage'))
 const itens = [
     {
         id: 0,
@@ -34,19 +37,27 @@ const itens = [
         item: "Cozinha"
     }
 ]
-export function DadosSalao() {
+export default function DadosSalao() {
     return (
-        <div className="w-full h-auto roboto-light text-xl sm:w-[87%] sm:flex sm:m-auto">
+        <div className="roboto-light text-xl w-full h-full lg:flex lg:justify-center lg:items-center">
 
-            <div className="w-full h-screen sm:w-4/5 sm:h-[30rem]">
-                <MapPage />
+            <div className="w-full h-screen">
+                <Suspense fallback={<LoadingImage />}>
+                    <MapPage />
+                </Suspense>
             </div>
 
-            <div className="py-3 text-justify px-5 bg-zinc-800">
+            <div className="h-auto w-auto lg:w-full">
+                <video autoPlay muted loop className="object-cover w-full h-screen">
+                    <source src={video} type="video/mp4" />
+                </video>
+            </div>
 
-                <div className="justify-start items-center gap-3 py-2">
+            <div className="py-3 text-justify px-5 bg-zinc-800 w-full h-auto lg:h-screen text-2xl">
+
+                <div className="justify-start items-center gap-3 py-4">
                     <h1>Rua Ramiro Barcelos</h1>
-                    <p>Numero: 80</p>
+                    <span>Numero: 80</span>
                 </div>
 
                 <ul>
@@ -61,7 +72,7 @@ export function DadosSalao() {
 
                 </ul>
 
-                <p className="italic font-bold text-red-500 mt-1">OBS: Horário do salão é de 10h ás 21h</p>
+                <span className="italic font-bold text-red-500 mt-1">OBS: Horário do salão é de 10h ás 21h</span>
             </div>
 
         </div>

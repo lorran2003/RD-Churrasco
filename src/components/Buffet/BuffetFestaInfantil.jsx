@@ -1,23 +1,29 @@
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import imgFestaInfantil from '../../assets/image/buffet/buffet_infantil.jpeg';
+import imgFestaInfantil from '../../assets/image/buffet/miniBurguer.jpg';
+import { lazy, Suspense } from 'react';
+import { LoadingImage } from '../LoadingImage';
 
-export function BuffetFestaInfantil() {
+const CardapioFestaInfantil = lazy(() => import('./CardaioFestaInfantil'));
+
+export default function BuffetFestaInfantil() {
     return (
         <div className='mt-2'>
 
-            <h1 className="dacingScriptPersonalizada bg-zinc-800 flex justify-center items-center text-center gap-5 py-2 px-2 sticky top-12 z-10 sm:w-3/4 sm:m-auto sm:rounded-md
-                                before:block before:bg-[#D70319] before:h-[2px] before:w-20 sm:before:w-2/5
-                                after:block after:bg-[#D70319] after:h-[2px] after:w-20 sm:after:w-2/5 "
+            <div className="dacingScriptPersonalizada bg-zinc-800 flex justify-center items-center text-center py-2 px-2 sticky top-12 z-10 lg:w-3/4 sm:max-lg:w-4/5 sm:m-auto sm:rounded-md
+                                before:block before:bg-[#D70319] before:h-[2px]   before:w-full
+                                after:block after:bg-[#D70319] after:h-[2px] after:w-full"
             >
-                Festa infantil
-            </h1>
+                <h1 className='w-[40rem] sm:max-lg:w-full sm:max-lg:px-4'>
+                    Festa infantil
+                </h1>
+            </div>
 
-            <div className="sm:w-3/4 bg-zinc-800 sm:p-4 sm:rounded-b-md sm:m-auto sm:relative sm:bottom-2">
+            <div className="lg:w-3/4 sm:max-lg:w-4/5 bg-zinc-800 sm:p-4 sm:rounded-b-md sm:m-auto sm:relative sm:bottom-2">
 
-                <img src={imgFestaInfantil} alt='foto de picanha' />
+                <img src={imgFestaInfantil} alt='foto de mini hamburguer' className='sm:rounded w-full' />
 
-                <button className="bg-[#3FE05C] text-zinc-50 text-xl w-full py-1 animate-pulse sm:text-4xl sm:mt-1" >
+                <button type='button' aria-label='realizar orçamento' className="bg-[#3FE05C] text-zinc-50 text-xl w-full py-1 animate-pulse sm:text-4xl sm:mt-1" >
                     <span className="mr-2">Faça seu orçamento!</span>
                     <FontAwesomeIcon icon={faWhatsapp} />
                 </button>
@@ -28,6 +34,9 @@ export function BuffetFestaInfantil() {
 
             </div>
 
+            <Suspense fallback={<LoadingImage />}>
+                <CardapioFestaInfantil />
+            </Suspense>
         </div>
     )
 }

@@ -11,7 +11,7 @@ import foto10 from "../../assets/image/salao/photograph/foto_salao(10).jpeg";
 import foto11 from "../../assets/image/salao/photograph/foto_salao(11).jpeg";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-export function CarrosselFotos() {
+export default function CarrosselFotos() {
     const photograph = [
         {
             id: 1,
@@ -62,17 +62,16 @@ export function CarrosselFotos() {
 
         <Swiper
             slidesPerView={1}
-            pagination={{ clickable: true }}
+            pagination={true}
             navigation={true}
-            autoHeight={true}
             centeredSlides={true}
             centeredSlidesBounds={true}
             loop={true}
         >
             {photograph.map((item) => (
-                <SwiperSlide key={item.id}>
-                    <div>
-                        <img src={item.img} alt="fotos do salão" className="lg:w-full" />
+                <SwiperSlide key={item.id} >
+                    <div className="w-full flex justify-center items-center">
+                        <img src={item.img} alt="fotos do salão" className="sm:rounded sm:h-screen" />
                     </div>
                 </SwiperSlide>
             ))}

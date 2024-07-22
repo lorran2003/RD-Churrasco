@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCcVisa, faCcMastercard, faPix } from '@fortawesome/free-brands-svg-icons';
 import logo from "../../public/logo.jpg"
-export function Footer() {
+export default function Footer() {
 
 
     return (

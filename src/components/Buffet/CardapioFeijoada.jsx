@@ -11,6 +11,7 @@ const arrayMenu = [
         id: 0,
         type: "Petisco de entrada",
         img: entrada,
+        alt: "foto de aipim frito",
         menu: [
             {
                 id: 0,
@@ -28,6 +29,7 @@ const arrayMenu = [
         id: 1,
         type: "Carnes",
         img: feijoada,
+        alt: "foto de uma panela de feijoada",
         menu: [
             {
                 id: 0,
@@ -80,6 +82,7 @@ const arrayMenu = [
         id: 2,
         type: "Guarnições",
         img: guarnicao,
+        alt: "foto de uma tijela de torresmo",
         menu: [
             {
                 id: 0,
@@ -123,6 +126,7 @@ const arrayMenu = [
         id: 3,
         type: "Sobremesa",
         img: sobremesa,
+        alt: "foto de um pudim de leite",
         menu: [
             {
                 id: 0,
@@ -135,6 +139,7 @@ const arrayMenu = [
         id: 4,
         type: "Bebidas",
         img: bebidas,
+        alt: "foto das bebidas",
         menu: [
             {
                 id: 0,
@@ -160,7 +165,7 @@ const arrayMenu = [
     }
 
 ]
-export function CardapioFeijoada() {
+export default function CardapioFeijoada() {
     return (
         <div className="greatVibesRegular">
             {arrayMenu.map((item) => (
@@ -168,24 +173,24 @@ export function CardapioFeijoada() {
                 <div key={item.id}>
 
                     <h1 className="dacingScriptPersonalizada flex justify-center items-center gap-2
-                    before:w-4 before:h-4 before:opacity-70 before:block before:bg-[#D70319] before:rounded-full
-                    text-center text-4xl bg-zinc-800 my-1 py-2">{item.type}</h1>
+                before:w-4 before:h-4 before:opacity-70 before:block before:bg-[#D70319] before:rounded-full
+                text-center text-4xl bg-zinc-800 my-1 py-2">{item.type}</h1>
 
-                    <div className="sm:flex sm:w-11/12 sm:m-auto">
+                    <div className="w-full sm:flex sm:w-11/12 sm:m-auto">
 
-                        <img src={item.img} alt="Entrada" className="w-full sm:max-w-3xl sm:rounded-l-md object-cover" />
+                        <img src={item.img} alt={item.alt} className="w-full h-auto sm:w-1/2 sm:rounded-l-md object-cover" />
 
-                        <div className="bg-zinc-900/95 text-3xl py-2 sm:w-full sm:rounded-r-md">
+                        <div className="bg-zinc-900/95 text-3xl py-2 sm:w-1/2 sm:rounded-r-md">
 
                             {item.menu.map((menu) => (
 
                                 <div key={menu.id} className="flex justify-start items-center py-2 px-1 border-dashed border-[#D70319] border-b-2 w-full gap-1 sm:px-2">
 
-                                    <p>{menu.number}</p>
+                                    <span>{menu.number}</span>
 
                                     <FontAwesomeIcon icon={faHashtag} className="text-[#D70319] text-base" />
 
-                                    <p>{menu.name}</p>
+                                    <span>{menu.name}</span>
                                 </div>
 
                             ))}
@@ -193,7 +198,7 @@ export function CardapioFeijoada() {
                     </div>
                 </div>
             ))}
-        </div > 
+        </div >
 
     )
 }

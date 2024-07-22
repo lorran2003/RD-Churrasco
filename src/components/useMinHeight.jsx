@@ -2,15 +2,13 @@ import { useEffect, useState } from "react";
 
 export function useMinHeight (){
 
-    const [ocultarImage, setOcultarImage] = useState(Boolean);
+    const [ocultarImage, setOcultarImage] = useState(window.innerHeight < 570);
 
     useEffect(() => {
 
         function handleResize() {
-            window.innerHeight < 570 ? setOcultarImage(true) : setOcultarImage(false)
+            setOcultarImage(window.innerHeight < 570)
         }
-
-        handleResize();
 
         window.addEventListener('resize', handleResize)
 

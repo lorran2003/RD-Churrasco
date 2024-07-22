@@ -2,26 +2,27 @@ import capaSalao from '../assets/image/salao/capaSalaoDesktop.jpeg';
 import { faUtensils, faImage } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import capaBuffet from '../assets/image/buffet/capaBuffetDesktop.jpeg';
+import capaBuffet from '../assets/image/buffet/capaBuffet.jpeg';
 import PropTypes from 'prop-types'
 
-export default function HomeMobileView({handleClickBuffet, handleClickSalao}) {
+export default function HomeMobileView({ handleClickBuffet, handleClickSalao }) {
     return (
-        <>
-            <div className="dacingScriptPersonalizada mt-3 flex justify-center items-center gap-4
+        <div className='greatVibesRegular bg-zinc-950/70 pt-1 text-3xl sm:text-4xl'>
+
+            <div className="dacingScriptPersonalizada mt-3 flex justify-center items-center gap-4 
             before:block before:bg-[#D70319] before:h-[2px] before:w-full 
             after:block after:bg-[#D70319] after:h-[1px] after:w-full">
-                <h1>Serviços</h1>
+                <h1 className='sm:text-6xl'>Serviços</h1>
             </div>
 
-            <div className="greatVibesRegular">
+            <div>
 
                 <div className="p-3 flex items-center justify-between">
 
-                    <h1 className="text-3xl flex items-center gap-3
-                    before:block before:bg-[#D70319] before:h-3 before:w-3 before:rounded-full">Buffet</h1>
+                    <h2 className="flex items-center gap-3 sm:text-5xl
+                    before:block before:bg-[#D70319] before:h-3 before:w-3 sm:before:h-5 sm:before:w-5 before:rounded-full">Buffet</h2>
 
-                    <button className="bg-zinc-50 text-zinc-800 text-xl p-1 rounded-md animate-bounce" onClick={handleClickBuffet}>
+                    <button type='button' aria-label='acessar a pagina buffet' className="bg-zinc-50 text-zinc-800 text-xl sm:text-4xl p-2 rounded-md animate-bounce" onClick={handleClickBuffet}>
 
                         <FontAwesomeIcon icon={faUtensils} />
 
@@ -33,11 +34,11 @@ export default function HomeMobileView({handleClickBuffet, handleClickSalao}) {
 
                 </div>
 
-                <div className="text-right">
+                <div>
 
-                    <img src={capaBuffet} alt='foto de picanha' />
+                    <img src={capaBuffet} alt='imagem de carne cortada' className='w-full h-auto' />
 
-                    <button className="bg-[#3FE05C] text-zinc-50 text-xl w-full py-1 animate-pulse" >
+                    <button type='button' aria-label='solicitar orçamento' className="bg-[#3FE05C] text-zinc-50 text-xl sm:text-4xl w-full py-1 sm:py-2 animate-pulse" >
 
                         <span className="mr-2">Faça seu orçamento!</span>
 
@@ -47,22 +48,22 @@ export default function HomeMobileView({handleClickBuffet, handleClickSalao}) {
 
                 </div>
 
-                <div className="bg-zinc-800 p-3" >
+                <div className="bg-zinc-800 p-3 sm:py-8" >
                     <p >
                         Descubra o sabor autêntico do churrasco feito com paixão e expertise. Nossas carnes selecionadas são cuidadosamente preparadas para oferecer uma experiência gastronômica única, onde cada mordida é um verdadeiro deleite para o paladar.
                     </p>
                 </div>
             </div>
 
-            <div className="greatVibesRegular">
+            <div>
 
                 <div className="p-3 flex items-center justify-between">
 
-                    <h1 className="text-3xl flex items-center gap-3
-                    before:block before:bg-[#D70319] before:h-3 before:w-3 before:rounded-full">Salão de festa</h1>
+                    <h1 className="flex items-center gap-3 sm:text-5xl
+                    before:block before:bg-[#D70319] before:h-3 before:w-3 before:rounded-full sm:before:h-5 sm:before:w-5">Salão de festa</h1>
 
 
-                    <button className="bg-zinc-50 text-zinc-800 text-xl p-1 rounded-md animate-bounce" onClick={handleClickSalao} >
+                    <button type='button' aria-label='acessar a pagina do salão' className="bg-zinc-50 text-zinc-800 text-xl sm:text-4xl p-2 rounded-md animate-bounce" onClick={handleClickSalao}>
 
                         <FontAwesomeIcon icon={faImage} />
 
@@ -74,11 +75,11 @@ export default function HomeMobileView({handleClickBuffet, handleClickSalao}) {
 
                 </div>
 
-                <div className="text-right">
+                <div>
 
-                    <img src={capaSalao} alt='Foto do salão' />
+                    <img src={capaSalao} alt='Foto do salão de festa' className='w-full h-auto' />
 
-                    <button className="bg-[#3FE05C] text-zinc-50 text-xl w-full py-1 animate-pulse" >
+                    <button type='button' aria-label='solicitar orçamento' className="bg-[#3FE05C] text-zinc-50 text-xl sm:text-4xl w-full py-1 sm:py-2 animate-pulse" >
 
                         <span className="mr-2">Faça seu orçamento!</span>
 
@@ -88,17 +89,17 @@ export default function HomeMobileView({handleClickBuffet, handleClickSalao}) {
 
                 </div>
 
-                <div className="bg-zinc-800 p-3" >
+                <div className="bg-zinc-800 p-3 sm:py-8" >
                     <p >
                         Descubra o lugar ideal para tornar seus momentos especiais! Nosso espaço oferece o cenário perfeito para celebrar com estilo e conforto. Com espaços amplos e piscina, estamos prontos para receber eventos de todos os tipos, desde festas de aniversário até eventos corporativos.
                     </p>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
 HomeMobileView.propTypes = {
     handleClickBuffet: PropTypes.func.isRequired,
     handleClickSalao: PropTypes.func.isRequired
- }
+}

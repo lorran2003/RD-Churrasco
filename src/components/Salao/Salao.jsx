@@ -1,33 +1,43 @@
-import { DadosSalao } from "./DadosSalao";
-import { CarrosselFotos } from "./CarrosselFotos";
-import { VideoSalao } from "./VideoSalao";
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { lazy, Suspense } from 'react';
+import { LoadingImage } from '../LoadingImage';
 
-export function Salao() {
+const CarrosselFotos = lazy(() => import('./CarrosselFotos'));
+const DadosSalao = lazy(() => import('./DadosSalao'));
+
+export default function Salao() {
     return (
 
         <div className="greatVibesRegular">
 
-            <button className="bg-[#3FE05C] text-zinc-50 text-5xl p-3 fixed right-2 bottom-1/4 z-10 rounded-full animate-pulse flex justify-center" >
 
-                <FontAwesomeIcon icon={faWhatsapp} className="rounded-full " />
+            <div className='w-full h-full'>
 
-            </button>
+                <div className="w-auto h-auto lg:bg-zinc-800 lg:w-2/3 lg:m-auto lg:rounded lg:p-10">
+                    <Suspense fallback={<LoadingImage />}>
 
-            <div className="sm:flex sm:justify-center sm:items-center">
-                
-                <div className="sm:w-[61%]">
-                    <CarrosselFotos />
-                </div>
+                        <CarrosselFotos />
 
-                <div>
-                    <VideoSalao />
+                    </Suspense>
                 </div>
 
             </div>
 
-            <DadosSalao />
+
+            <Suspense fallback={<LoadingImage />}>
+
+                <div className='flex justify-center items-center mt-2'>
+                    <DadosSalao />
+                </div>
+
+
+            </Suspense>
+            <button type='button' aria-label='realizar orçamento' className="bg-[#3FE05C] text-zinc-50 text-4xl w-full py-2 animate-pulse" >
+                <span className="mr-2">Faça seu orçamento!</span>
+                <FontAwesomeIcon icon={faWhatsapp} />
+            </button>
+
         </div>
 
     )

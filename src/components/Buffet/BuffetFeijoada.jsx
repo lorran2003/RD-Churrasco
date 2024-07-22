@@ -1,25 +1,28 @@
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import imgFeijoda from '../../assets/image/buffet/buffet_feijoada.jpg';
-import { CardapioFeijoada } from './CardapioFeijoada';
+import { lazy, Suspense } from 'react';
+import { LoadingImage } from '../LoadingImage';
 
-export function BuffetFeijoada() {
+const CardapioFeijoada = lazy(() => import('./CardapioFeijoada'));
+
+export default function BuffetFeijoada() {
     return (
         <div className='mt-2'>
 
-            <h1 className="dacingScriptPersonalizada bg-zinc-800 flex justify-center items-center gap-5 py-2 px-2 sticky top-12 z-10 sm:w-3/4 sm:m-auto sm:rounded-md
+            <h1 className="dacingScriptPersonalizada bg-zinc-800 flex justify-center items-center gap-5 py-2 px-2 sticky top-12 z-10 lg:w-3/4 sm:max-lg:w-4/5 sm:m-auto sm:rounded-md
                                 before:block before:bg-[#D70319] before:h-[2px] before:w-full
                                 after:block after:bg-[#D70319] after:h-[2px] after:w-full "
             >
                 Feijoada
             </h1>
 
-            <div className='sm:w-3/4 bg-zinc-800 sm:p-4 sm:rounded-b-md sm:m-auto sm:relative sm:bottom-2'>
+            <div className='lg:w-3/4 sm:max-lg:w-4/5 bg-zinc-800 sm:p-4 sm:rounded-b-md sm:m-auto sm:relative sm:bottom-2'>
 
 
-                <img src={imgFeijoda} alt='foto do prato de feijoada' className='sm:rounded' />
+                <img src={imgFeijoda} alt='foto do prato de feijoada' className='sm:rounded w-full h-auto' />
 
-                <button className="bg-[#3FE05C] text-zinc-50 text-xl w-full py-1 animate-pulse sm:text-4xl sm:mt-1 sm:rounded" >
+                <button type='button' aria-label='realizar orçamento' className="bg-[#3FE05C] text-zinc-50 text-xl w-full py-1 animate-pulse sm:text-4xl sm:mt-1 sm:rounded" >
                     <span className="mr-2">Faça seu orçamento!</span>
                     <FontAwesomeIcon icon={faWhatsapp} />
                 </button>
@@ -30,7 +33,9 @@ export function BuffetFeijoada() {
 
             </div>
 
-            <CardapioFeijoada />
+            <Suspense fallback={<LoadingImage />}>
+                <CardapioFeijoada />
+            </Suspense>
 
         </div>
     )
