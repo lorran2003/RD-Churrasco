@@ -1,4 +1,5 @@
 import logo from "../../public/logo.jpg";
+import logoMobel from "../../public/logoMobel.jpg";
 import video from "../assets/video.mp4"
 import videoMobile from "../assets/Video_RdChurrasco.mp4"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,6 +12,7 @@ import { useGSAP } from "@gsap/react";
 export default function Header() {
 
     const mobile = useMobile();
+    const logoView = mobile ? logoMobel : logo;
     const videoBackgroundHeader = mobile ? videoMobile : video;
 
     useGSAP(() => {
@@ -23,7 +25,7 @@ export default function Header() {
     }, []);
 
     return (
-        <header className="roboto-light relative h-screen px-28 text-zinc-50 overflow-hidden">
+        <header className="relative h-screen px-28 text-zinc-50 overflow-hidden">
 
             <div className="absolute w-full inset-0">
                 <video autoPlay muted loop className="object-cover w-full h-screen">
@@ -38,8 +40,7 @@ export default function Header() {
                 <div className="w-full py-5 sm:m-auto sm:w-3/4 sm:flex sm:justify-between">
 
                     <div>
-
-                        <img src={logo} alt="Logo" className="rounded-full m-auto" />
+                        <img src={logoView} alt="Logo" className="w-28 sm:w-full h-auto rounded-full m-auto" />
                     </div>
 
                     <nav className="flex mt-2 items-center justify-center gap-4 text-xl">
@@ -62,18 +63,18 @@ export default function Header() {
                 </div>
 
 
-                <div className="text-justify flex flex-col gap-8 sm:mt-5 justify-start items-center w-full text-5xl">
+                <div className="text-justify flex flex-col gap-8 sm:mt-5 justify-start items-center w-full">
 
                     <div className="w-full flex justify-center items-center after:content-[''] after:bg-[#8F1620] after:h-0.5 after:w-1/4 after:block before:h-0.5 before:w-1/4 before:block before:bg-[#8F1620]">
 
-                        <h1 className="text-center sm:px-5 dacingScript">
+                        <h1 className="text-center text-4xl sm:text-5xl sm:px-5 dacingScript">
                             <strong>Seja bem vindo!</strong>
                         </h1>
 
                     </div>
 
                     <div className="text-center">
-                        <h1 className=" w-full text-center">
+                        <h1 className=" w-full text-center text-4xl sm:text-5xl">
                             RD
                             <br />
                             Churrasco

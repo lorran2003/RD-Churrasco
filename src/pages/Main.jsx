@@ -13,9 +13,6 @@ export default function Main() {
 
     let RenderComponent = () => {
         switch (navigation) {
-            case "Home":
-                return <Home setBuffet={() => setNavigation("Buffet")} setSalao={() => setNavigation("Salao")} />
-
             case "Salao":
                 return <Salao />
 
