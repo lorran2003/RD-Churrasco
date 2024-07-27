@@ -17,8 +17,8 @@ export default function Header() {
 
     useGSAP(() => {
         const ct = gsap.context(
-            gsap.to("#divMain", { delay: 1.5, duration: 3, opacity: 1 }),
-            gsap.to("#divIntro", { delay: 3, duration: 1, height: 150, opacity:1 })
+            gsap.to("#divMain", { duration: 3, opacity: 1 }),
+            gsap.to("#divIntro", { delay: 1, duration: 1, height: 150, opacity:1 })
         )
 
         return () => { ct.revert() };

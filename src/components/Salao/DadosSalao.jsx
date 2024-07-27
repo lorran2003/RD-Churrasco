@@ -6,7 +6,7 @@ const MapPage = lazy(() => import('./MapPage'))
 const itens = [
     {
         id: 0,
-        item: "WI-FI"
+        item: "Wi-fi"
     },
     {
         id: 1,
@@ -39,7 +39,7 @@ const itens = [
 ]
 export default function DadosSalao() {
     return (
-        <div className="roboto-light text-xl w-full h-full lg:flex lg:justify-center lg:items-center">
+        <div className="dacingScriptPersonalizada w-full h-full lg:flex lg:justify-center lg:items-center">
 
             <div className="w-full h-screen">
                 <Suspense fallback={<LoadingImage />}>
