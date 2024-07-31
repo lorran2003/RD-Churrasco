@@ -51,18 +51,18 @@ export default function HomeDesktopView({ handleClickBuffet, handleClickSalao })
 
 
     return (
-        <div className='greatVibesRegular mt-2 flex flex-col gap-2'>
+        <div className='fontTimes mt-2 flex flex-col gap-2'>
 
-            <div id='divBuffet' className='flex text-3xl'>
+            <div id='divBuffet' className='flex text-2xl pb-16 pl-5 py-16'>
 
                 <div className='relative w-2/3 xl:w-1/2 overflow-hidden'>
-
-                    <img src={capaBuffet} alt='imagem de carne cortada' className='w-full h-auto shadow-md translate-x-full rounded-r-md img' />
+                    
+                    <img src={capaBuffet} alt='imagem de carne cortada' className='w-full h-auto shadow-md translate-x-full rounded-md img' />
 
                     <div className='absolute flex flex-col gap-2 justify-center items-start top-8 '>
 
 
-                        <button type='button' aria-label='acessar pagina de buffet' className='btnsInfo translate-x-full opacity-0 z-10 ml-4 bg-zinc-50 text-zinc-800 rounded-md shadow-[0_0_6px] shadow-zinc-950 flex justify-start items-center gap-2 text-4xl pr-2' onClick={handleClickBuffet}>
+                        <button type='button' aria-label='acessar pagina de buffet' className='btnsInfo translate-x-full opacity-0 z-10 ml-4 bg-zinc-50 text-zinc-800 rounded-md shadow-[0_0_6px] shadow-zinc-950 flex justify-start items-center gap-2 pr-2 animate-bounce' onClick={handleClickBuffet}>
 
                             <FontAwesomeIcon icon={faBars} className='shadow-md shadow-zinc-950 rounded p-2' />
 
@@ -71,7 +71,7 @@ export default function HomeDesktopView({ handleClickBuffet, handleClickSalao })
                             Clique e confira nosso buffet
                         </button>
 
-                        <button type='button' aria-label='realizar orçamento' className='btnOrcamento bg-[#3FE05C] text-zinc-50 p-2 rounded-r-md bottom-96 w-80 h-14 text-3xl -translate-x-full opacity-0 flex gap-2 justify-center items-center shadow shadow-zinc-950'>
+                        <button type='button' aria-label='realizar orçamento' className='btnOrcamento bg-[#3FE05C] text-zinc-50 p-2 rounded-r-md bottom-96 w-80 h-14 -translate-x-full opacity-0 flex gap-2 justify-center items-center shadow shadow-zinc-950'>
 
                             <span>Faça seu orçamento!</span>
                             <FontAwesomeIcon icon={faWhatsapp} />
@@ -84,27 +84,27 @@ export default function HomeDesktopView({ handleClickBuffet, handleClickSalao })
 
                 <div className='w-1/2 xl:w-1/3 flex items-center justify-center'>
                     <p className='text text-justify p-5 bg-zinc-800 rounded-md overflow-visible relative right-14 shadow-sm shadow-zinc-950 opacity-0'>
-                        Descubra o sabor autêntico do churrasco feito com paixão e expertise. Nossas carnes selecionadas são cuidadosamente preparadas para oferecer uma experiência gastronômica única, onde cada mordida é um verdadeiro deleite para o paladar. Combinando técnicas tradicionais com os melhores cortes, entregamos uma explosão de sabores que vai conquistar até os paladares mais exigentes. Venha saborear a excelência culinária e descubra por que nosso churrasco é simplesmente incomparável.
+                        Descubra o sabor autêntico do churrasco feito com paixão e expertise. Nossas carnes selecionadas são cuidadosamente preparadas para oferecer uma experiência gastronômica única, onde cada mordida é um verdadeiro deleite para o paladar. Combinando técnicas tradicionais com os melhores cortes, entregamos uma explosão de sabores que vai conquistar até os paladares mais exigentes.
                     </p>
                 </div>
 
             </div >
 
-            <div id='divSalao' className='text-3xl flex justify-end'>
+            <div id='divSalao' className='flex text-2xl justify-end pr-5 pt-16 pb-32'>
 
                 <div className='w-1/2 xl:w-1/3 flex items-center justify-center z-10'>
                     <p className='text text-justify p-5 bg-zinc-800 rounded-md overflow-visible relative left-8 shadow-sm shadow-zinc-950 opacity-0'>
-                        Descubra o lugar ideal para tornar seus momentos especiais! Nosso espaço oferece o cenário perfeito para celebrar com estilo e conforto. Com espaços amplos e piscina, estamos prontos para receber eventos de todos os tipos, desde festas de aniversário até eventos corporativos. Além disso, nossa equipe dedicada está aqui para ajudar a tornar seu evento perfeito em todos os detalhes. Venha nos visitar e descubra por que somos a escolha preferida para quem busca qualidade.
+                        Descubra o lugar ideal para tornar seus momentos especiais! Nosso espaço oferece o cenário perfeito para celebrar com estilo e conforto. Com espaços amplos e piscina, estamos prontos para receber eventos de todos os tipos, desde festas de aniversário até eventos corporativos. Venha nos visitar e descubra por que somos a escolha preferida para quem busca qualidade.
                     </p>
                 </div>
 
                 <div className='w-2/3 xl:w-1/2 relative overflow-hidden'>
 
-                    <img src={capaSalao} alt='foto do salão de festa' className='w-full h-auto opacity-0 rounded-l-md -translate-x-full img' />
+                    <img src={capaSalao} alt='foto do salão de festa' className='w-full h-auto opacity-0 rounded-md -translate-x-full img' />
 
                     <div className='flex flex-col justify-center items-end gap-2 right-0 absolute top-8'>
 
-                        <button type='button' aria-label='acessar pagina do salão de festa' className='btnsInfo translate-x-full opacity-0 z-10 mr-4 bg-zinc-50 text-zinc-800 rounded-md shadow-[0_0_6px] shadow-zinc-950 flex justify-start items-center gap-2 text-4xl pl-2' onClick={handleClickSalao}>
+                        <button type='button' aria-label='acessar pagina do salão de festa' className='btnsInfo translate-x-full opacity-0 z-10 mr-4 bg-zinc-50 text-zinc-800 rounded-md shadow-[0_0_6px] shadow-zinc-950 flex justify-start items-center gap-2 pl-2 animate-bounce' onClick={handleClickSalao}>
 
                             Clique e confira nosso salão
 
@@ -114,7 +114,7 @@ export default function HomeDesktopView({ handleClickBuffet, handleClickSalao })
 
                         </button>
 
-                        <button type='button' aria-label='realizar orçamento' className='btnOrcamento bg-[#3FE05C] text-zinc-50 p-2 rounded-l-md bottom-96 w-80 h-14 text-3xl translate-x-full opacity-0 flex gap-2 justify-center items-center shadow shadow-zinc-950'>
+                        <button type='button' aria-label='realizar orçamento' className='btnOrcamento bg-[#3FE05C] text-zinc-50 p-2 rounded-l-md bottom-96 w-80 h-14 translate-x-full opacity-0 flex gap-2 justify-center items-center shadow shadow-zinc-950'>
 
                             <span>Faça seu orçamento!</span>
                             <FontAwesomeIcon icon={faWhatsapp} />

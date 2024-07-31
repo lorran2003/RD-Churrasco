@@ -82,7 +82,7 @@ export default function Header() {
                         </p>
                     </div>
 
-                    <div id="divIntro" className="w-full sm:w-4/5 h-0 overflow-hidden flex justify-center items-center bg-zinc-950/20 border-y-2 border-[#8F1620] py-3 opacity-0 ">
+                    <div id="divIntro" className="w-11/12 sm:w-4/5 h-0 overflow-hidden flex justify-center items-center bg-zinc-950/20 border-y-2 border-[#8F1620] py-3 opacity-0 ">
 
                         <p className="text-2xl sm:text-4xl px-4 greatVibesRegular">Transformando eventos há mais de 18 anos em uma celebração inesquecível da vida. Junte-se a nós para uma festa com sabores que ficam na memória.</p>
                     </div>

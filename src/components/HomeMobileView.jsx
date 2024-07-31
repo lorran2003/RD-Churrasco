@@ -7,19 +7,19 @@ import PropTypes from 'prop-types'
 
 export default function HomeMobileView({ handleClickBuffet, handleClickSalao }) {
     return (
-        <div className='greatVibesRegular bg-zinc-950/70 pt-1 text-3xl sm:text-4xl'>
+        <div className='fontTimes pt-1'>
 
             <div className="dacingScriptPersonalizada mt-3 flex justify-center items-center gap-4 
-            before:block before:bg-[#D70319] before:h-[2px] before:w-full 
+            before:block before:bg-[#D70319] before:h-[1px] before:w-full
             after:block after:bg-[#D70319] after:h-[1px] after:w-full">
-                <h1 className='sm:text-6xl'>Serviços</h1>
+                <h1 className='text-4xl'>Serviços</h1>
             </div>
 
-            <div>
+            <div className='px-4'>
 
                 <div className="p-3 flex items-center justify-between">
 
-                    <h2 className="flex items-center gap-3 sm:text-5xl
+                    <h2 className="flex items-center gap-3 greatVibesRegular text-3xl
                     before:block before:bg-[#D70319] before:h-3 before:w-3 sm:before:h-5 sm:before:w-5 before:rounded-full">Buffet</h2>
 
                     <button type='button' aria-label='acessar a pagina buffet' className="bg-zinc-50 text-zinc-800 text-xl sm:text-4xl p-2 rounded-md animate-bounce" onClick={handleClickBuffet}>

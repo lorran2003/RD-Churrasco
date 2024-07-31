@@ -8,7 +8,11 @@ body {
     font-family: "PT Sans Narrow", sans-serif;
     font-style: normal;
 }
-
+.fontTimes{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    font-size: small;
+}
 .dacingScript {
     font-family: "Dancing Script", cursive;
     font-optical-sizing: auto;

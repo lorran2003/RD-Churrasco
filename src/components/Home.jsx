@@ -31,10 +31,11 @@ export default function Home({ setSalao, setBuffet }) {
             gsap.to("#divImg", {
                 x: 0,
                 duration: 1,
+                opacity: 1,
 
                 scrollTrigger: {
                     trigger: "#img",
-                    start: "top 90%",
+                    start: "top 95%",
                 }
 
             })
@@ -44,7 +45,7 @@ export default function Home({ setSalao, setBuffet }) {
 
                 scrollTrigger: {
                     trigger: "#text",
-                    start: "top 60%",
+                    start: "top 90%",
                 }
 
             })
@@ -55,18 +56,17 @@ export default function Home({ setSalao, setBuffet }) {
     }, [])
 
     return (
-        <section className="text-2xl greatVibesRegular mt-2 sm:text-4xl">
+        <section className="fontTimes pt-10 bg-zinc-950/80">
 
-            <div className="flex flex-col gap-2">
+            <div className="text-2xl flex flex-col gap-2">
 
-                <div className="bg-zinc-800 p-3 text-justify
-                         sm:m-auto lg:rounded-md lg:w-3/5 sm:flex sm:flex-col sm:justify-center sm:items-center sm:p-5
+                <div className="bg-zinc-800 p-3 text-start w-11/12 m-auto rounded-md
+                lg:max-xl:w-1/2 xl:w-1/2
                 ">
-                    <h1>Bem-vindo ao RD Churrasco.<br />
-                        Transforme seus eventos em experiências inesquecíveis com o nosso serviços de buffet.
+                    <h1>Transforme seus eventos em experiências inesquecíveis com o nosso serviços.
 
                     </h1>
-
+        
                     <img src={capaBuffet} alt="imagem de carne cortada" className="rounded-md my-2 w-full" />
 
                     <h1>
@@ -74,17 +74,18 @@ export default function Home({ setSalao, setBuffet }) {
                     </h1>
                 </div>
 
-                <div className="w-full xl:w-4/5 lg:m-auto sm:max-lg:relative lg:flex lg:justify-center lg:items-start lg:mt-2 lg:max-xl:gap-8">
+                <div className="w-full py-16 xl:w-4/5 lg:m-auto flex max-lg:flex-col justify-center items-center gap-2">
 
-                    <div id="divImg" className="bg-zinc-800 p-3 text-justify lg:rounded-l-md object-cover overflow-hidden w-full h-full sm:p-5 lg:w-1/2 -translate-x-full">
+                    <div id="divImg" className="bg-zinc-800 p-3 text-justify rounded-md object-cover overflow-hidden m-auto w-5/6 h-auto sm:max-lg:w-7/12 lg:w-2/5 -translate-x-full opacity-0">
 
-                        <img id="img" src={img} alt="imagem do proprietario da RD churrasco" className="w-full object-cover h-full rounded-xl" />
+                        <img id="img" src={img} alt="imagem do proprietario da RD churrasco" className="w-auto object-cover h-full rounded-xl" />
 
                     </div>
 
-                    <div id="text" className="opacity-0 h-auto text-zinc-50 bg-zinc-800 p-4 lg:w-1/2 lg:rounded-r-md lg:sticky lg:top-0">
+                    <div id="text" className="opacity-0 text-lg h-auto text-zinc-50 m-auto bg-zinc-800 sm:max-lg:w-7/12 p-4 w-5/6 lg:w-1/2 rounded-md ">
                         <p>
-                            Olá, sou o Robson, churrasqueiro e dono da RD Churrasco. <br /> Na RD Churrasco, combinamos a arte da culinária com um atendimento excepcional para criar momentos únicos e saborosos. Nosso diferencial é a combinação de cortes nobres, técnicas de preparo aperfeiçoadas e um atendimento impecável. Seja para eventos corporativos, casamentos ou festas de aniversário, nossa equipe dedicada está pronta para oferecer menus personalizados que atendem a todos os gostos e necessidades.
+                            Olá, sou o Robson, churrasqueiro e dono da RD Churrasco.
+                            Na RD Churrasco, combinamos a arte da culinária com um atendimento excepcional para criar momentos únicos e saborosos. Nosso diferencial é a combinação de cortes nobres, técnicas de preparo aperfeiçoadas. Seja para eventos corporativos, casamentos ou festas de aniversário.
                         </p>
                     </div>
                 </div>

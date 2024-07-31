@@ -9,7 +9,7 @@ export default function Buffet() {
 
     return (
 
-        <section className="greatVibesRegular text-2xl sm:text-3xl mt-2">
+        <section className="text-2xl sm:text-3xl mt-2">
 
             <div className="bg-zinc-800 mb-2 py-2
                     sm:max-lg:w-4/5 lg:w-3/4 sm:m-auto sm:rounded-md">
