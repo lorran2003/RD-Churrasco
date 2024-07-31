@@ -70,8 +70,8 @@ export default function CarrosselFotos() {
         >
             {photograph.map((item) => (
                 <SwiperSlide key={item.id} >
-                    <div className="w-full flex justify-center items-center">
-                        <img src={item.img} alt="fotos do salão" className="sm:rounded sm:h-screen" />
+                    <div className="w-auto flex justify-center items-center">
+                        <img src={item.img} alt="fotos do salão" className="sm:rounded sm:h-auto" />
                     </div>
                 </SwiperSlide>
             ))}

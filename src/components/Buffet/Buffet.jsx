@@ -1,33 +1,15 @@
 import { useState, lazy, Suspense } from "react";
 import { LoadingImage } from "../LoadingImage";
 
-const BuffetChurrasco = lazy(() => import('./BuffetChurrasco'));
-const BuffetFeijoada = lazy(() => import('./BuffetFeijoada'));
-const BuffetFestaInfantil = lazy(() => import('./BuffetFestaInfantil'));
+const OptionsBuffet = lazy(() => import('./OptionsBuffet'))
 
-const componentsBuffet = [
-    {
-        label:"churrasco",
-        component:<BuffetChurrasco />
-    },
-    {
-        label:"feijoada",
-        component:<BuffetFeijoada />
-    },
-    {
-        label:"festaInfantil",
-        component:<BuffetFestaInfantil />
-    },
-]
 export default function Buffet() {
 
-    const [component, setComponent] = useState(componentsBuffet[0]);
-
-    let RenderComponent = () => component.component;
+    const [index, setIndex] = useState(0);
 
     return (
 
-        <section className="greatVibesRegular text-2xl sm:text-3xl">
+        <section className="greatVibesRegular text-2xl sm:text-3xl mt-2">
 
             <div className="bg-zinc-800 mb-2 py-2
                     sm:max-lg:w-4/5 lg:w-3/4 sm:m-auto sm:rounded-md">
@@ -39,9 +21,9 @@ export default function Buffet() {
                     <button type='button' aria-label='acessar cardapio do buffet de churrasco' className={`text-4xl flex justify-start items-center gap-2 pl-5 py-2
                             before:w-3 before:h-3 before:block before:bg-[#e90e24] before:rounded-full before:duration-500 duration-500 hover:text-zinc-50/40
     
-                                ` + (component.label === "churrasco" ? "before:opacity-100" : "before:opacity-40")} onClick={() => setComponent(componentsBuffet[0])}>
+                                ` + (index === 0 ? "before:opacity-100" : "before:opacity-40")} onClick={() => setIndex(0)}>
 
-                        <span className={"after:duration-500 after:block after:w-full after:h-0.5 " + (component.label === 'churrasco' ? " after:bg-[#e90e24]" : "after:bg-zinc-800")}>
+                        <span className={"after:duration-500 after:block after:w-full after:h-0.5 " + (index === 0 ? " after:bg-[#e90e24]" : "after:bg-zinc-800")}>
 
                             Churrasco
 
@@ -49,9 +31,9 @@ export default function Buffet() {
 
                     </button>
 
-                    <button type='button' aria-label='acessar cardapio do buffet de feijoada' className={"text-4xl flex justify-start items-center gap-2 pl-5 py-2 before:w-3 before:h-3 before:block before:bg-[#D70319] before:rounded-full before:duration-500 duration-500 hover:text-zinc-50/40 " + (component.label === "feijoada" ? "before:opacity-100" : "before:opacity-40")} onClick={() => setComponent(componentsBuffet[1])}>
+                    <button type='button' aria-label='acessar cardapio do buffet de feijoada' className={"text-4xl flex justify-start items-center gap-2 pl-5 py-2 before:w-3 before:h-3 before:block before:bg-[#D70319] before:rounded-full before:duration-500 duration-500 hover:text-zinc-50/40 " + (index === 1 ? "before:opacity-100" : "before:opacity-40")} onClick={() => setIndex(1)}>
 
-                        <span className={"after:duration-500 after:block after:w-full after:h-0.5 " + (component.label === 'feijoada' ? " after:bg-[#e90e24]" : "after:bg-zinc-800")}>
+                        <span className={"after:duration-500 after:block after:w-full after:h-0.5 " + (index === 1 ? " after:bg-[#e90e24]" : "after:bg-zinc-800")}>
 
                             Feijoda
 
@@ -59,9 +41,9 @@ export default function Buffet() {
 
                     </button>
 
-                    <button type='button' aria-label='acessar cardapio do buffet de festa infantil' className={"text-4xl flex justify-start items-center gap-2 pl-5 py-2 before:w-3 before:h-3 before:block before:bg-[#D70319] before:rounded-full before:duration-500 duration-500 hover:text-zinc-50/40 " + (component.label === "festaInfantil" ? "before:opacity-100" : "before:opacity-40")} onClick={() => setComponent(componentsBuffet[2])}>
+                    <button type='button' aria-label='acessar cardapio do buffet de festa infantil' className={"text-4xl flex justify-start items-center gap-2 pl-5 py-2 before:w-3 before:h-3 before:block before:bg-[#D70319] before:rounded-full before:duration-500 duration-500 hover:text-zinc-50/40 " + (index === 2 ? "before:opacity-100" : "before:opacity-40")} onClick={() => setIndex(2)}>
 
-                        <span className={"after:duration-500 after:block after:w-full after:h-0.5 " + (component.label === 'festaInfantil' ? " after:bg-[#e90e24]" : "after:bg-zinc-800")}>
+                        <span className={"after:duration-500 after:block after:w-full after:h-0.5 " + (index === 2 ? " after:bg-[#e90e24]" : "after:bg-zinc-800")}>
 
                             Festa infantil
 
@@ -73,8 +55,9 @@ export default function Buffet() {
             </div>
 
             <Suspense fallback={<LoadingImage />}>
-                <RenderComponent />
+                <OptionsBuffet index={index} />
             </Suspense>
+            
         </section>
     )
 }

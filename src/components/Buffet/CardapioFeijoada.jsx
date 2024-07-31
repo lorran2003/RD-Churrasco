@@ -176,7 +176,7 @@ export default function CardapioFeijoada() {
                 before:w-4 before:h-4 before:opacity-70 before:block before:bg-[#D70319] before:rounded-full
                 text-center text-4xl bg-zinc-800 my-1 py-2">{item.type}</h1>
 
-                    <div className="w-full sm:flex sm:w-11/12 sm:m-auto">
+                    <div className="w-full sm:flex sm:max-xl:w-11/12 xl:w-4/5 sm:m-auto">
 
                         <img src={item.img} alt={item.alt} className="w-full h-auto sm:w-1/2 sm:rounded-l-md object-cover" />
 

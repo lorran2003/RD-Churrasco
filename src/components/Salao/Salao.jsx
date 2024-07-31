@@ -9,36 +9,32 @@ const DadosSalao = lazy(() => import('./DadosSalao'));
 export default function Salao() {
     return (
 
-        <div className="greatVibesRegular">
-
-
-            <div className='w-full h-full'>
-
-                <div className="w-auto h-auto lg:bg-zinc-800 lg:w-2/3 lg:m-auto lg:rounded lg:p-10">
-                    <Suspense fallback={<LoadingImage />}>
-
-                        <CarrosselFotos />
-
-                    </Suspense>
-                </div>
-
-            </div>
+        <section className="greatVibesRegular bg-zinc-950/60">
 
 
             <Suspense fallback={<LoadingImage />}>
 
-                <div className='flex justify-center items-center mt-2'>
+                <div className='w-auto h-full'>
+
+                    <div className="w-auto h-auto xl:p-5">
+
+                        <CarrosselFotos />
+                    </div>
+
+                </div>
+
+                <div className='flex justify-center items-center'>
                     <DadosSalao />
                 </div>
 
-
+                <button type='button' aria-label='realizar orçamento' className="bg-[#3FE05C] text-zinc-50 text-4xl w-full py-2 animate-pulse" >
+                    <span className="mr-2">Faça seu orçamento!</span>
+                    <FontAwesomeIcon icon={faWhatsapp} />
+                </button>
+                
             </Suspense>
-            <button type='button' aria-label='realizar orçamento' className="bg-[#3FE05C] text-zinc-50 text-4xl w-full py-2 animate-pulse" >
-                <span className="mr-2">Faça seu orçamento!</span>
-                <FontAwesomeIcon icon={faWhatsapp} />
-            </button>
 
-        </div>
+        </section >
 
     )
 }

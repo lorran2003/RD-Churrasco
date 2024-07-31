@@ -55,7 +55,7 @@ export default function Home({ setSalao, setBuffet }) {
     }, [])
 
     return (
-        <section className="text-2xl greatVibesRegular sm:text-4xl">
+        <section className="text-2xl greatVibesRegular mt-2 sm:text-4xl">
 
             <div className="flex flex-col gap-2">
 

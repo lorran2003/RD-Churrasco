@@ -1,7 +1,6 @@
 import logo from "../../public/logo.jpg";
 import logoMobel from "../../public/logoMobel.jpg";
-import video from "../assets/video.mp4"
-import videoMobile from "../assets/Video_RdChurrasco.mp4"
+import videoBackgroundHeader from "../assets/video.mp4"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { useMobile } from "../components/useMobile";
@@ -13,7 +12,6 @@ export default function Header() {
 
     const mobile = useMobile();
     const logoView = mobile ? logoMobel : logo;
-    const videoBackgroundHeader = mobile ? videoMobile : video;
 
     useGSAP(() => {
         const ct = gsap.context(
