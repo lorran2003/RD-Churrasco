@@ -3,7 +3,7 @@ import { lazy, Suspense, useState } from 'react';
 import { LoadingImage } from "../components/LoadingImage";
 
 const Buffet = lazy(() => import("../components/Buffet/Buffet"));
-const Home = lazy(() => import("../components/Home"));
+const Home = lazy(() => import("../components/Home/Home"));
 const Salao = lazy(() => import("../components/Salao/Salao"));
 
 export default function Main() {
@@ -25,17 +25,17 @@ export default function Main() {
     }
 
     return (
-
+        
         <main className='text-zinc-50 bg-fixed bg-cover' style={{ backgroundImage: `URL(${bg})` }}>
 
 
             <nav className='greatVibesRegular text-red-700 bg-zinc-800 flex gap-3 justify-center items-center text-3xl sm:text-4xl py-2'>
 
-                <button type='button' aria-label='acessar pagina do buffet' className={'after:w-full after:h-0.5 duration-200 after:duration-200 hover:opacity-70 ' + (navigation === "Buffet" ? "after:block text-zinc-50 after:duration-200 after:bg-[#D70319]" : "")} onClick={() => setNavigation("Buffet")} >Buffet</button>
+                <button type='button' aria-label='acessar pagina do buffet' className={'after:w-full after:h-0.5 duration-200 after:duration-200 hover:opacity-70 ' + (navigation === "Buffet" ? "after:block text-zinc-50 after:duration-200 after:bg-[#D70319] animate-pulse" : "")} onClick={() => setNavigation("Buffet")} >Buffet</button>
 
-                <button type='button' aria-label='acessar pagina home' className={'after:w-full after:h-0.5 duration-200 after:duration-200 hover:opacity-70 ' + (navigation === "Home" ? "after:block text-zinc-50 after:duration-200 after:bg-[#D70319]" : "")} onClick={() => setNavigation("Home")} >Home</button>
+                <button type='button' aria-label='acessar pagina home' className={'after:w-full after:h-0.5 duration-200 after:duration-200 hover:opacity-70 ' + (navigation === "Home" ? "after:block text-zinc-50 after:duration-200 after:bg-[#D70319] animate-pulse" : "")} onClick={() => setNavigation("Home")} >Home</button>
 
-                <button type='button' aria-label='acessar pagina do salão de festa' className={'after:w-full after:h-0.5 duration-200 after:duration-200 hover:opacity-70 ' + (navigation === "Salao" ? "after:block text-zinc-50 after:duration-200 after:bg-[#D70319]" : "")} onClick={() => setNavigation("Salao")} >Salão</button>
+                <button type='button' aria-label='acessar pagina do salão de festa' className={'after:w-full after:h-0.5 duration-200 after:duration-200 hover:opacity-70 ' + (navigation === "Salao" ? "after:block text-zinc-50 after:duration-200 after:bg-[#D70319] animate-pulse " : "")} onClick={() => setNavigation("Salao")} >Salão</button>
 
             </nav>
 

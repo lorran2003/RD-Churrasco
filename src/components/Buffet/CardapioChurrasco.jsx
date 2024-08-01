@@ -202,24 +202,30 @@ const arrayMenu = [
 
 export default function CardapioChurrasco() {
     return (
-        <div className="greatVibesRegular">
+        <div className="fontTimes">
             {arrayMenu.map((item) => (
-               
-               <div key={item.id}>
-               
-                    <h1 className="dacingScriptPersonalizada flex justify-center items-center gap-2
-                    before:w-4 before:h-4 before:opacity-70 before:block before:bg-[#D70319] before:rounded-full
-                    text-center text-4xl bg-zinc-800 my-1 py-2">{item.type}</h1>
 
-                    <div className="w-full sm:flex sm:max-xl:w-11/12 xl:w-4/5 sm:m-auto">
+                <div key={item.id} className="pb-10">
 
-                        <img src={item.img} alt={item.alt} className="w-full h-auto sm:w-1/2 sm:rounded-l-md object-cover" />
+                    <div className="dacingScriptPersonalizada w-full flex justify-center items-center gap-2 bg-zinc-800 text-center rounded-md py-1 sm:w-4/5 my-2 mx-auto
+                    before:w-4 before:h-4 before:opacity-70 before:block before:bg-[#D70319] before:rounded-full ">
 
-                        <div className="bg-zinc-900/95 text-3xl py-2 sm:w-1/2 sm:rounded-r-md">
+                        <h1 className="text-3xl sm:text-4xl">{item.type}</h1>
+                    </div>
+
+                    <div className="flex max-lg:flex-col justify-center items-center lg:items-start gap-2 lg:w-full">
+
+                        <div className='rounded-md bg-zinc-800 p-2 sm:max-lg:w-4/5 lg:h-full lg:max-xl:w-1/2 xl:w-2/5'>
+
+                            <img src={item.img} alt={item.alt} className="w-full h-auto rounded-md object-cover border-2 border-solid border-[#D70319]" />
+
+                        </div>
+
+                        <div className="bg-zinc-800 text-lg sm:text-2xl p-3 rounded-md w-full sm:max-lg:w-4/5 lg:h-full lg:w-2/5">
 
                             {item.menu.map((menu) => (
 
-                                <div key={menu.id} className="flex justify-start items-center py-2 px-1 border-dashed border-[#D70319] border-b-2 w-full gap-1 sm:px-2">
+                                <div key={menu.id} className="flex justify-start items-center py-2 px-1 border-dashed border-[#D70319] border-b-2 w-full gap-1 sm:px-2 lg:h-full">
 
                                     <span>{menu.number}</span>
 
