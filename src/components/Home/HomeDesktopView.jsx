@@ -54,8 +54,8 @@ export default function HomeDesktopView({ handleClickBuffet, handleClickSalao })
         <div className='fontTimes mt-2'>
 
             <div className="dacingScriptPersonalizada mt-3 flex justify-center items-center gap-4 
-            before:block before:bg-[#D70319] before:h-[1px] before:w-2/5 before:xl:5/12
-            after:block after:bg-[#D70319] after:h-[1px] after:w-2/5 after:xl:w-5/12">
+            before:block before:bg-[#D70319] before:h-1 before:w-2/5 before:xl:5/12
+            after:block after:bg-[#D70319] after:h-1 after:w-2/5 after:xl:w-5/12">
                 <h1 className='text-5xl'>Serviços</h1>
             </div>
 
@@ -63,14 +63,14 @@ export default function HomeDesktopView({ handleClickBuffet, handleClickSalao })
 
                 <div className='relative w-2/3 xl:w-1/2 overflow-hidden'>
 
-                    <div className='rounded-md bg-zinc-800 border border-solid border-[#D70319] p-4'>
-                        <img src={capaBuffet} alt='imagem de carne cortada' className='w-full h-auto shadow-md translate-x-full rounded-md img' />
+                    <div className='rounded-sm bg-zinc-800 p-4'>
+                        <img src={capaBuffet} alt='imagem de carne cortada' className='w-full h-auto shadow-md shadow-zinc-950 translate-x-full rounded-xl border-2 border-solid border-[#D70319] img' />
                     </div>
 
                     <div className='absolute flex flex-col gap-2 justify-center items-start top-8 '>
 
 
-                        <button type='button' aria-label='acessar pagina de buffet' className='btnsInfo translate-x-full opacity-0 z-10 ml-4 bg-zinc-50 text-zinc-800 rounded-md shadow-[0_0_6px] shadow-zinc-950 flex justify-start items-center gap-2 pr-2 animate-bounce text-xl' onClick={handleClickBuffet}>
+                        <button type='button' aria-label='acessar pagina de buffet' className='btnsInfo translate-x-full opacity-0 z-10 ml-6 bg-zinc-50 text-zinc-800 rounded-md shadow-[0_0_6px] shadow-zinc-950 flex justify-start items-center gap-2 pr-2 animate-bounce text-xl border border-solid border-zinc-950' onClick={handleClickBuffet}>
 
                             <FontAwesomeIcon icon={faBars} className='shadow-md shadow-zinc-950 rounded p-2' />
 
@@ -79,7 +79,7 @@ export default function HomeDesktopView({ handleClickBuffet, handleClickSalao })
                             Acessar buffet
                         </button>
 
-                        <button type='button' aria-label='realizar orçamento' className='btnOrcamento bg-[#3FE05C] text-zinc-50 rounded-r-md bottom-96 w-80 h-14 -translate-x-full opacity-0 flex gap-2 justify-center items-center shadow shadow-zinc-950 text-2xl'>
+                        <button type='button' aria-label='realizar orçamento' className='btnOrcamento bg-[#3FE05C] text-zinc-50 rounded-r-md bottom-96 w-80 h-14 -translate-x-full opacity-0 flex gap-2 justify-center items-center shadow shadow-zinc-950 text-2xl border-y border-r border-solid border-zinc-50'>
 
                             <span>Faça seu orçamento!</span>
                             <FontAwesomeIcon icon={faWhatsapp} />
@@ -116,13 +116,13 @@ export default function HomeDesktopView({ handleClickBuffet, handleClickSalao })
 
                 <div className='w-2/3 xl:w-1/2 relative overflow-hidden'>
 
-                    <div className='rounded-md bg-zinc-800 border border-solid border-[#D70319] p-4'>
-                        <img src={capaSalao} alt='foto do salão de festa' className='w-full h-auto opacity-0 rounded-md -translate-x-full img' />
+                    <div className='rounded-sm bg-zinc-800 p-4'>
+                        <img src={capaSalao} alt='foto do salão de festa' className='w-full h-auto opacity-0 rounded-xl shadow-md shadow-zinc-950 -translate-x-full border-2 border-solid border-[#D70319] img' />
                     </div>
 
                     <div className='flex flex-col justify-center items-end gap-2 right-0 absolute top-8'>
 
-                        <button type='button' aria-label='acessar pagina do salão de festa' className='btnsInfo translate-x-full opacity-0 z-10 mr-4 bg-zinc-50 text-zinc-800 rounded-md shadow-[0_0_6px] shadow-zinc-950 flex justify-start items-center gap-2 pl-2 animate-bounce text-xl' onClick={handleClickSalao}>
+                        <button type='button' aria-label='acessar pagina do salão de festa' className='btnsInfo translate-x-full opacity-0 z-10 mr-6 bg-zinc-50 text-zinc-800 rounded-md shadow-[0_0_6px] shadow-zinc-950 flex justify-start items-center gap-2 pl-2 animate-bounce text-xl border border-solid border-zinc-950' onClick={handleClickSalao}>
 
                             Acessar fotos
 
@@ -132,7 +132,7 @@ export default function HomeDesktopView({ handleClickBuffet, handleClickSalao })
 
                         </button>
 
-                        <button type='button' aria-label='realizar orçamento' className='btnOrcamento bg-[#3FE05C] text-zinc-50 rounded-l-md bottom-96 w-80 h-14 translate-x-full opacity-0 flex gap-2 justify-center items-center shadow shadow-zinc-950 text-2xl'>
+                        <button type='button' aria-label='realizar orçamento' className='btnOrcamento bg-[#3FE05C] text-zinc-50 rounded-l-md bottom-96 w-80 h-14 translate-x-full opacity-0 flex gap-2 justify-center items-center shadow shadow-zinc-950 text-2xl border-y border-l border-solid border-zinc-50'>
 
                             <span>Faça seu orçamento!</span>
                             <FontAwesomeIcon icon={faWhatsapp} />

@@ -15,17 +15,14 @@ const MenuFestaInfantil = lazy(() => import('./CardapioFestaInfantil'));
 const arryInfoBuffet = [
     {
         img: imgChurrasco,
-        title: 'Churrasco',
         component: < MenuChurrasco />
     },
     {
         img: imgFeijoda,
-        title: 'Feijoada',
         component: <MenuFeijoada />
     },
     {
         img: imgFestaInfantil,
-        title: 'Infantil',
         component: <MenuFestaInfantil />
     }
 ]
@@ -43,7 +40,7 @@ export default function OptionsBuffet({ index }) {
         <div className="px-4 sm:px-6">
 
             <div className='h-auto flex max-lg:flex-col justify-center max-lg:items-center gap-2 pb-10 xl:w-4/5 xl:m-auto'>
-              
+
                 <div className="flex flex-col items-center justify-center">
 
                     <div className="dacingScriptPersonalizada bg-zinc-800 flex justify-center items-center w-full sm:m-auto rounded-md py-1
@@ -51,7 +48,7 @@ export default function OptionsBuffet({ index }) {
                     after:block after:bg-[#D70319] after:h-[2px] after:w-1/4 sm:after:w-1/3 ">
 
                         <h1 className="text-3xl sm:text-4xl px-4">
-                            {viewBuffet.title}
+                            Cardápio
                         </h1>
                     </div>
 
