@@ -135,7 +135,7 @@ export default function CardapioFestaInfantil() {
 
                     <div className="flex max-lg:flex-col justify-center items-center lg:items-start gap-2 lg:w-full">
 
-                        <div className='rounded-md bg-zinc-800 p-2 sm:max-lg:w-4/5 lg:h-full lg:max-xl:w-1/2 xl:w-2/5'>
+                        <div className='rounded-md bg-zinc-800 p-2 w-full sm:max-lg:w-4/5 lg:h-full lg:max-xl:w-1/2 xl:w-2/5'>
 
                             <img src={item.img} alt={item.alt} className="w-full h-auto rounded-md object-cover border-2 border-solid border-[#D70319]" />
 

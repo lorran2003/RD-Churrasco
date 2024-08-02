@@ -16,19 +16,16 @@ const arryInfoBuffet = [
     {
         img: imgChurrasco,
         title: 'Churrasco',
-        label: 'Descubra o sabor autêntico do churrasco feito com paixão e expertise. Nossas carnes selecionadas são cuidadosamente preparadas para oferecer uma experiência gastronômica única, onde cada mordida é um verdadeiro deleite para o paladar. Confira o nosso cardapio a baixo!',
         component: < MenuChurrasco />
     },
     {
         img: imgFeijoda,
         title: 'Feijoada',
-        label: 'Nosso Buffet de Feijoada oferece uma autêntica feijoada brasileira, preparada com ingredientes frescos e selecionados, para garantir uma experiência gastronômica inesquecível. Confira o nosso cardapio a baixo!',
         component: <MenuFeijoada />
     },
     {
         img: imgFestaInfantil,
         title: 'Infantil',
-        label: 'Transforme a sua festa em um evento inesquecível com nosso Buffet de Comidas para Festas Infantis. Oferecemos um cardápio variado e delicioso, pensado especialmente para agradar o paladar dos pequenos e garantir a alegria de todos os convidados. Confira o nosso cardapio a baixo!',
         component: <MenuFestaInfantil />
     }
 ]
@@ -68,10 +65,6 @@ export default function OptionsBuffet({ index }) {
                     </button>
 
                 </div>
-
-                <p className='p-3 bg-zinc-800 rounded-md text-lg sm:text-2xl lg:max-xl:w-1/2 xl:w-1/3 lg:text-justify '>
-                    {viewBuffet.label}
-                </p>
 
             </div>
 
