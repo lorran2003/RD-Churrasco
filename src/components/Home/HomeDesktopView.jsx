@@ -95,7 +95,7 @@ export default function HomeDesktopView({ handleClickBuffet, handleClickSalao })
                     <h2 className="flex items-center gap-3 sm:text-4xl greatVibesRegular text-3xl
                     before:block before:bg-[#D70319] before:h-3 before:w-3 before:rounded-full sm:before:h-5 sm:before:w-5">Buffet</h2>
 
-                    <p className='text text-justify p-5 bg-zinc-800 rounded-md overflow-visible shadow-sm shadow-zinc-950 opacity-0'>
+                    <p className='text text-justify p-5 bg-zinc-800 rounded-md overflow-visible shadow-sm shadow-zinc-950 opacity-0 border-2 border-solid border-zinc-50/30'>
                         Descubra o sabor autêntico do churrasco feito com paixão e expertise. Nossas carnes selecionadas são cuidadosamente preparadas para oferecer uma experiência gastronômica única, onde cada mordida é um verdadeiro deleite para o paladar. Combinando técnicas tradicionais com os melhores cortes, entregamos uma explosão de sabores que vai conquistar até os paladares mais exigentes.
                     </p>
                 </div>
@@ -109,7 +109,7 @@ export default function HomeDesktopView({ handleClickBuffet, handleClickSalao })
                     <h2 className="flex items-center gap-3 sm:text-4xl greatVibesRegular text-3xl
                     after:block after:bg-[#D70319] after:h-3 after:w-3 after:rounded-full sm:after:h-5 sm:after:w-5">Salão de festa</h2>
                     
-                    <p className='text text-justify p-5 bg-zinc-800 rounded-md overflow-visible shadow-sm shadow-zinc-950 opacity-0'>
+                    <p className='text text-justify p-5 bg-zinc-800 rounded-md overflow-visible shadow-sm shadow-zinc-950 opacity-0 border-2 border-solid border-zinc-50/30'>
                         Descubra o lugar ideal para tornar seus momentos especiais! Nosso espaço oferece o cenário perfeito para celebrar com estilo e conforto. Com espaços amplos e piscina, estamos prontos para receber eventos de todos os tipos, desde festas de aniversário até eventos corporativos. Venha nos visitar e descubra por que somos a escolha preferida para quem busca qualidade.
                     </p>
                 </div>

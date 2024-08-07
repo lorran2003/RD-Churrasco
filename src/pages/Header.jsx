@@ -1,4 +1,4 @@
-import videoBackgroundHeader from "../assets/video.mp4"
+import videoBackgroundHeader from "../assets/video.mp4";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { gsap } from "gsap";

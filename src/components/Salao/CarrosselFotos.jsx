@@ -11,53 +11,54 @@ import foto10 from "../../assets/image/salao/photograph/foto_salao(10).jpeg";
 import foto11 from "../../assets/image/salao/photograph/foto_salao(11).jpeg";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+const photograph = [
+    {
+        id: 1,
+        img: foto1
+    },
+    {
+        id: 2,
+        img: foto2
+    },
+    {
+        id: 3,
+        img: foto3
+    },
+    {
+        id: 4,
+        img: foto4
+    },
+    {
+        id: 5,
+        img: foto5
+    },
+    {
+        id: 6,
+        img: foto6
+    },
+    {
+        id: 7,
+        img: foto7
+    },
+    {
+        id: 8,
+        img: foto8
+    },
+    {
+        id: 9,
+        img: foto9
+    },
+    {
+        id: 10,
+        img: foto10
+    },
+    {
+        id: 11,
+        img: foto11
+    },
+]
+
 export default function CarrosselFotos() {
-    const photograph = [
-        {
-            id: 1,
-            img: foto1
-        },
-        {
-            id: 2,
-            img: foto2
-        },
-        {
-            id: 3,
-            img: foto3
-        },
-        {
-            id: 4,
-            img: foto4
-        },
-        {
-            id: 5,
-            img: foto5
-        },
-        {
-            id: 6,
-            img: foto6
-        },
-        {
-            id: 7,
-            img: foto7
-        },
-        {
-            id: 8,
-            img: foto8
-        },
-        {
-            id: 9,
-            img: foto9
-        },
-        {
-            id: 10,
-            img: foto10
-        },
-        {
-            id: 11,
-            img: foto11
-        },
-    ]
     return (
 
         <Swiper
@@ -71,7 +72,9 @@ export default function CarrosselFotos() {
             {photograph.map((item) => (
                 <SwiperSlide key={item.id} >
                     <div className="w-auto flex justify-center items-center">
-                        <img src={item.img} alt="fotos do salão" className="sm:rounded sm:h-auto" />
+                        <div className="bg-zinc-800 p-4 rounded-md">
+                            <img src={item.img} alt="fotos do salão" className="shadow-md shadow-zinc-950 rounded-xl border-2 border-solid border-[#D70319]" />
+                        </div>
                     </div>
                 </SwiperSlide>
             ))}

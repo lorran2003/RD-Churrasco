@@ -9,16 +9,17 @@ const DadosSalao = lazy(() => import('./DadosSalao'));
 export default function Salao() {
     return (
 
-        <section className="greatVibesRegular bg-zinc-950/60">
+        <section className="greatVibesRegular bg-zinc-950/60 py-10 px-5">
 
 
             <Suspense fallback={<LoadingImage />}>
 
                 <div className='w-auto h-full'>
 
-                    <div className="w-auto h-auto xl:p-5">
+                    <div className="w-auto h-auto lg:px-5">
 
                         <CarrosselFotos />
+                        
                     </div>
 
                 </div>

@@ -68,13 +68,13 @@ export default function Home({ setSalao, setBuffet }) {
 
             <div className="w-auto py-16 max-lg:px-4 flex max-lg:flex-col justify-center items-center gap-4 lg:max-xl:gap-7">
 
-                <div id="divImg" className="bg-zinc-800 p-3 rounded-sm overflow-hidden -translate-x-full opacity-0 w-11/12 sm:max-lg:w-2/3 lg:max-xl:w-2/5 xl:w-1/3">
+                <div id="divImg" className="bg-zinc-800 p-4 rounded-sm overflow-hidden -translate-x-full opacity-0 w-11/12 sm:max-lg:w-2/3 lg:max-xl:w-2/5 xl:w-1/3">
 
                     <img id="img" src={img} alt="imagem do proprietario da RD churrasco" className="w-auto object-cover h-auto rounded-xl border-solid border-2 border-[#D70319] shadow-md shadow-zinc-950" />
 
                 </div>
 
-                <div id="text" className="opacity-0 text-lg h-auto bg-zinc-800 rounded-md w-11/12 sm:max-lg:w-2/3 lg:max-xl:w-2/5 xl:w-1/3 p-3 sm:max-lg:text-2xl ">
+                <div id="text" className="opacity-0 text-lg h-auto bg-zinc-800 rounded-md w-11/12 sm:max-lg:w-2/3 lg:max-xl:w-2/5 xl:w-1/3 p-3 sm:max-lg:text-2xl border-2 border-solid border-zinc-50/30">
                     <p>
                         Olá, sou o Robson, churrasqueiro e dono da RD Churrasco.
                         Na RD Churrasco, combinamos a arte da culinária com um atendimento excepcional para criar momentos únicos e saborosos. Nosso diferencial é a combinação de cortes nobres, técnicas de preparo aperfeiçoadas. Seja para eventos corporativos, casamentos ou festas de aniversário.

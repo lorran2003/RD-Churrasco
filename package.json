@@ -23,7 +23,7 @@
     "react-dom": "^18.2.0",
     "react-id-swiper": "^4.0.0",
     "react-modal": "^3.16.1",
-    "swiper": "^11.1.2",
+    "swiper": "^11.1.9",
     "vite-plugin-require": "^0.0.3"
   },
   "devDependencies": {

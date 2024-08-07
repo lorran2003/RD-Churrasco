@@ -15,7 +15,7 @@ export default function MapPage() {
         <div className='w-full h-full'>
             {
                 isLoaded ? (
-                    <GoogleMap mapContainerStyle={{ width: '100%', height: '100%' }} center={center} zoom={18}>
+                    <GoogleMap mapContainerStyle={{ width: '100%', height: '100%', borderRadius:'10px', border:'2px solid', borderColor:'#D70319' }} center={center} zoom={18}>
                         <Marker position={center} />
                     </GoogleMap>
                 ) : <></>

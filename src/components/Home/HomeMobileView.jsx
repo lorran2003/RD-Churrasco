@@ -17,7 +17,7 @@ export default function HomeMobileView({ handleClickBuffet, handleClickSalao }) 
 
             <div className='px-4 py-16'>
 
-                <div className="p-3 sm:p-5 flex items-center justify-between bg-zinc-800 rounded-md">
+                <div className="p-3 sm:p-5 flex items-center justify-between bg-zinc-800 rounded-md border-solid border-2 border-[#D70319]">
 
                     <h2 className="flex items-center gap-3 greatVibesRegular text-3xl sm:text-4xl
                     before:block before:bg-[#D70319] before:h-3 before:w-3 sm:before:h-5 sm:before:w-5 before:rounded-full">Buffet</h2>
@@ -60,7 +60,7 @@ export default function HomeMobileView({ handleClickBuffet, handleClickSalao }) 
 
             <div className='px-4 pb-16'>
 
-                <div className="p-3 flex items-center justify-between bg-zinc-800 rounded-md">
+                <div className="p-3 flex items-center justify-between bg-zinc-800 rounded-md border-solid border-2 border-[#D70319]">
 
                     <h2 className="flex items-center gap-3 sm:text-4xl greatVibesRegular text-3xl
                     before:block before:bg-[#D70319] before:h-3 before:w-3 before:rounded-full sm:before:h-5 sm:before:w-5">Salão</h2>

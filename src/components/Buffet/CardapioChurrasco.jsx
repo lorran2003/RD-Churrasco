@@ -205,9 +205,9 @@ export default function CardapioChurrasco() {
         <div className="fontTimes">
             {arrayMenu.map((item) => (
 
-                <div key={item.id} className="pb-10">
+                <div key={item.id} className="pb-10 sm:w-4/5  sm:m-auto">
 
-                    <div className="dacingScriptPersonalizada w-full flex justify-center items-center gap-2 bg-zinc-800 text-center rounded-md py-1 sm:w-4/5 my-2 mx-auto
+                    <div className="dacingScriptPersonalizada w-full flex justify-center items-center gap-2 bg-zinc-800 text-center rounded-md py-1 my-2 mx-auto border-solid border-2 border-[#D70319]
                     before:w-4 before:h-4 before:opacity-70 before:block before:bg-[#D70319] before:rounded-full ">
 
                         <h1 className="text-3xl sm:text-4xl">{item.type}</h1>
@@ -215,13 +215,13 @@ export default function CardapioChurrasco() {
 
                     <div className="flex max-lg:flex-col justify-center items-center lg:items-start gap-2 lg:w-full">
 
-                        <div className='rounded-md bg-zinc-800 p-2 sm:max-lg:w-4/5 lg:h-full lg:max-xl:w-1/2 xl:w-2/5'>
+                        <div className='rounded-sm bg-zinc-800 p-4 lg:w-1/2'>
 
-                            <img src={item.img} alt={item.alt} className="w-full h-auto rounded-md object-cover border-2 border-solid border-[#D70319]" />
+                            <img src={item.img} alt={item.alt} className="w-full h-auto rounded-md object-cover border-2 border-solid border-[#D70319] shadow-md shadow-zinc-950" />
 
                         </div>
 
-                        <div className="bg-zinc-800 text-lg sm:text-2xl p-3 rounded-md w-full sm:max-lg:w-4/5 lg:h-full lg:w-2/5">
+                        <div className="bg-zinc-800 text-lg sm:text-2xl p-3 rounded-md w-full lg:w-1/2">
 
                             {item.menu.map((menu) => (
 
